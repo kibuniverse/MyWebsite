@@ -1,0 +1,18 @@
+.header {
+    background-color: #fff;
+    padding: .4rem;
+    overflow: hidden;
+    height: 3rem;
+    opacity: .8;
+}
+
+.headerName {
+    color: #52c41a;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
+
+.headerSign {
+    color: #999;
+}

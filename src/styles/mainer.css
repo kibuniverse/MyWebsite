@@ -1,0 +1,44 @@
+
+.commMain {
+    margin-top: .5rem;
+}
+
+.commLR {
+    background-color: #fff;
+    border-bottom: 1px solid rgb(236, 230, 230);
+    padding: 1rem;
+    border-radius: .3rem;
+}
+
+.commLeft {   
+    margin-right: .5rem;
+}
+
+.list-title{
+    font-size:1.3rem;
+    color: #1e90ff;
+    padding: 0 0.5rem;
+}
+.list-context{
+    color:#777;
+    padding:.5rem;
+}
+.list-icon{
+    padding:.5rem 0;
+    color:#AAA;
+}
+.list-icon span{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.author-motto {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
