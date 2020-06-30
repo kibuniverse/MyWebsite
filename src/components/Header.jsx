@@ -10,7 +10,7 @@ const Header = () => (
                 <span className='headerName'>Ethanykz</span>
                 <span className='haederSign'>welcome my website</span>
             </Col>
-            <Col xs={0} sm={0} md={14} lg={8} xl={6}>
+            <Col xs={0} sm={0} md={14} lg={8} xl={6} offset={4}>
                 <Menu mode='horizontal'>
                     <Menu.Item key='home'>
                         <HomeOutlined />
