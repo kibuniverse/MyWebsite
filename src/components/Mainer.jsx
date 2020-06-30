@@ -4,7 +4,7 @@ import LeftContent from './LeftContent.jsx'
 import RightContent from './RightContent.jsx'
 import '../styles/mainer.css'
 
-function Mainer(props) {
+const Mainer = () => {
     return (
         <div className='mainer'>
             <Row className='commMain' justify='center'>

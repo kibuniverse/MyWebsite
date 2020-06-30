@@ -11,4 +11,6 @@ const AppComponent = () => (
 		<Mainer />
 	</div>
 )
-export default AppComponent;
+
+
+export default AppComponent

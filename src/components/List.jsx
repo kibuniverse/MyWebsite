@@ -4,7 +4,7 @@ import '../styles/list.css'
 
 function List(props) {
     return (
-        <div className='Lsit'>
+        <div className='List'>
             <Row className='commMain' justify='center'>
                 <Col className='commLeft commLR' xs={24} sm={24} md={16} lg={15} sl={14}>
                     left
