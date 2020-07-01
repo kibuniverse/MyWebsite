@@ -8,6 +8,7 @@ const Auther = () => {
             <div className='author-motto'>
                 It takes time to get good at coding.
             </div>
+            <div>你守护的东西，最终也会守护你</div>
             <Divider>github</Divider>
             <GithubOutlined onClick={() => {window.location.href='https://github.com/kibuniverse'}}/>
         </div>

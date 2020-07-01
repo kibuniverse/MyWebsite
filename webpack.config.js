@@ -1,14 +1,22 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const htmlPlugin = new HtmlWebpackPlugin({
+const htmlPluginHome = new HtmlWebpackPlugin({
     template: path.join(__dirname, 'src/index.html'),
     filename: 'index.html'
 })
+const htmlPluginBlog = new HtmlWebpackPlugin({
+    template: path.join(__dirname, 'src/index.html'),
+})
 
 module.exports = {
+    entry: {
+        home: './src/index',
+        blog: ''
+    }
     plugins: [
-        htmlPlugin
+        htmlPluginHome,
+        htmlPluginBlog
     ],
     module: {
         rules: [
