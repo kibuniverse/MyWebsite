@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Row, Col, List} from 'antd'
 import {CalendarOutlined} from '@ant-design/icons'
-import '../styles/mainer.css' 
+import '../../styles/mainer.css' 
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Advert.css'
+import '../../styles/Advert.css'
 
 const Advert = () => {
     return (

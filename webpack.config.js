@@ -3,17 +3,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const htmlPluginHome = new HtmlWebpackPlugin({
     template: path.join(__dirname, 'src/index.html'),
-    filename: 'index.html'
+    filename: 'index.html',
+    chunks: ['index']
 })
 const htmlPluginBlog = new HtmlWebpackPlugin({
-    template: path.join(__dirname, 'src/index.html'),
+    template: path.join(__dirname, 'src/pages/blog.html'),
+    filename: 'blog.html',
+    chunks: ['blog']
 })
 
 module.exports = {
     entry: {
-        home: './src/index',
-        blog: ''
-    }
+        index: './src/index.js',
+        blog: './src/components/blogPage/index.js'
+    },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, '../dist'),
+    },
     plugins: [
         htmlPluginHome,
         htmlPluginBlog

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Row, Col} from 'antd'
-import '../styles/list.css'
+import '../../styles/list.css'
 
 function List(props) {
     return (

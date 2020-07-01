@@ -2,7 +2,7 @@ import React from 'react'
 import {Row, Col} from 'antd'
 import LeftContent from './LeftContent.jsx'
 import RightContent from './RightContent.jsx'
-import '../styles/mainer.css'
+import '../../styles/mainer.css'
 
 const Mainer = () => {
     return (
