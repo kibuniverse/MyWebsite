@@ -1,0 +1,15 @@
+.bread-nav {
+    background-color: rgb(178, 201, 178);
+    padding: .2rem 0 .2rem .2rem;
+    border-radius: 1rem;
+}
+
+.blog-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.list-icon {
+    text-align: center;
+}

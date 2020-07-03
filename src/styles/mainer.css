@@ -1,23 +1,22 @@
 
-.commMain {
+
+.commLeft{
+    background-color: #FFF;
+    padding:.3rem;
+    border-radius: .3rem;
+    border-bottom:1px solid #eee;
+    height: max-content;
+}
+.commRight{
+    background-color: #FFF;
+    margin-left: .5rem;
+    padding:.3rem;
+    border-radius: .3rem;
+    border-bottom:1px solid #eee;
+    height: max-content;
+}
+.commMain{
     margin-top: .5rem;
-}
-
-.commRight {
-    background-color: #fff;
-    border-bottom: 1px solid rgb(236, 230, 230);
-    padding: 1rem;
-    border-radius: .3rem;
-    opacity: .95;
-}
-
-.commLeft {   
-    margin-right: .5rem;
-    background-color: #fff;
-    border-bottom: 1px solid rgb(236, 230, 230);
-    padding: 1rem;
-    border-radius: .3rem;
-    opacity: .95;
 }
 
 .list-title{

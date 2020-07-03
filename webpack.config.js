@@ -19,7 +19,7 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, '../dist'),
+        path: __dirname + '/dist'
     },
     plugins: [
         htmlPluginHome,
@@ -34,6 +34,9 @@ module.exports = {
             }, {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
+            }, {
+                test: /\.md$/,
+                use: 'raw-loader'
             }
         ]
     },

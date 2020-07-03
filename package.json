@@ -23,6 +23,7 @@
     "css-loader": "^3.6.0",
     "html-webpack-plugin": "^4.3.0",
     "install": "^0.13.0",
+    "raw-loader": "^4.0.1",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
@@ -35,6 +36,7 @@
     "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-markdown": "^4.3.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   }
