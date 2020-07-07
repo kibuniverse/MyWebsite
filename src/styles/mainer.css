@@ -14,6 +14,8 @@
     border-radius: .3rem;
     border-bottom:1px solid #eee;
     height: max-content;
+    position: sticky !important;
+    top: 1rem;
 }
 .commMain{
     margin-top: .5rem;
@@ -35,6 +37,9 @@
 .list-icon span{
     display: inline-block;
     padding: 0 10px;
+}
+.list-introduce {
+    margin-left: .5rem;
 }
 
 .author-info {
