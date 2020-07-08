@@ -3,13 +3,12 @@ import {List} from 'antd'
 import {CalendarOutlined, SnippetsOutlined} from '@ant-design/icons'
 import '../../styles/mainer.css' 
 import axios from 'axios'
-
+import servicePath from '../../config/apiurl'
 
 const LeftContent = (list) => {
     const [myList, setMyList] = useState([])
     useEffect(() => {
-        axios('http://127.0.0.1:7001/default/getArticleList').then(res => {
-            console.log(res.data)
+        axios(servicePath.getArticleList).then(res => {
             setMyList(res.data.data)
         })     
     }, [])

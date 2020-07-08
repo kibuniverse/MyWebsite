@@ -4,11 +4,12 @@ import { HomeOutlined, UserOutlined, CalendarOutlined, FlagOutlined} from '@ant-
 import '../../styles/blogDetail.css'
 import ReactMarkdown from 'react-markdown'
 import axios from 'axios'
+import servicePath from '../../config/apiurl'
 const LeftComponent = props => {
     const [articleDetail, setArticle] = useState([])
     let id = getPageSendParas().get('id');
     useEffect(() => {
-        axios(`http://127.0.0.1:7001/default/getArticleById/${id}`).then(res => {
+        axios(servicePath.getArticleById + `/${id}`).then(res => {
             console.log(res.data.data)
             setArticle(res.data.data[0])
         })     
