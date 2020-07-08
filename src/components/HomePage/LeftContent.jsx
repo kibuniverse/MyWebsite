@@ -20,7 +20,7 @@ const LeftContent = (list) => {
                 itemLayout='vertical'
                 dataSource={myList}
                 renderItem={item => (
-                    <List.Item>
+                    <List.Item onClick={() => {window.location.href = `http://localhost:8081/blog.html?id=${item.id}`}}>
                         <div className='list-title'>{item.title}</div>
                         <div className="list-icon">
                             <span>

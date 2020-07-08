@@ -1,10 +1,19 @@
-import React from 'react'
-import {Row, Col, Breadcrumb} from 'antd'
+import React, { useState, useEffect } from 'react'
+import {Breadcrumb} from 'antd'
 import { HomeOutlined, UserOutlined, CalendarOutlined, FlagOutlined} from '@ant-design/icons';
 import '../../styles/blogDetail.css'
 import ReactMarkdown from 'react-markdown'
-import promoieMarkdown from '../../md/promise.md'
+import axios from 'axios'
 const LeftComponent = props => {
+    const [articleDetail, setArticle] = useState([])
+    let id = getPageSendParas().get('id');
+    useEffect(() => {
+        axios(`http://127.0.0.1:7001/default/getArticleById/${id}`).then(res => {
+            console.log(res.data.data)
+            setArticle(res.data.data[0])
+        })     
+    }, [])
+
     return (
         <div>
             <div className='bread-nav'>
@@ -16,25 +25,25 @@ const LeftComponent = props => {
                         <UserOutlined />
                         <span>blog</span>
                     </Breadcrumb.Item>
-                    <Breadcrumb.Item>手把手带你使用es6语法实现Promise</Breadcrumb.Item>
+                    <Breadcrumb.Item>{articleDetail.title}</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
             <div className='blog-title'>
-                手把手带你使用es6语法实现Promise
+                {articleDetail.title}
             </div>
             <div className='list-icon'>
                 <span>
                     <CalendarOutlined />
-                    2020-7-2
+                    {new Date(articleDetail.addTime).toLocaleString().split(' ')[0]}
                 </span>
                 <span>
                     <FlagOutlined />
-                    原生js
+                    <span>{articleDetail.typeName}</span>
                 </span>
             </div>          
             <div className='detail-content'>
                 <ReactMarkdown 
-                    source={promoieMarkdown}
+                    source={articleDetail.articleContent}
                     escapeHtml={false}
                 />
             </div>  
@@ -42,5 +51,13 @@ const LeftComponent = props => {
     )
 }
 
+function getPageSendParas() {
+    const paramsMap = new Map()
+    window.location.search.slice(1).split('&').forEach(item => {
+        let [key, value] = item.split('=')
+        paramsMap.set(key, value)
+    }) 
+    return paramsMap
+}
 
 export default LeftComponent

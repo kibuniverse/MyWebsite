@@ -19,7 +19,7 @@ class HomeController extends Controller{
     async getArticleById() {
         let id = this.ctx.params.id
 
-        let sql = 'SELECT articles.id,type.typeName,articles.title,articles.introduce,articles.addTime FROM articles LEFT JOIN type ON articles.typeId = type.id WHERE articles.id=' + id;
+        let sql = 'SELECT articles.id,type.typeName,articles.title,articles.introduce,articles.addTime,articles.articleContent FROM articles LEFT JOIN type ON articles.typeId = type.id WHERE articles.id=' + id;
 
         const res = await this.app.mysql.query(sql);
 
