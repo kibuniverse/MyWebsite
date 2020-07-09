@@ -12,6 +12,12 @@ const htmlPluginBlog = new HtmlWebpackPlugin({
     chunks: ['blog']
 })
 
+const htmlPluginList = new HtmlWebpackPlugin({
+    template: path.join(__dirname, 'src/pages/list.html'),
+    filename: 'list.html',
+    chunks: ['list']
+})
+
 module.exports = {
     entry: {
         index: './src/index.js',
@@ -23,13 +29,24 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
-        prot: '8081',
-        historyApiFallback: true
+        contentBase: './dist',
+        port: 8081,
+        hot: true,
+        historyApiFallback: {
+            rewrite: [
+                {
+                    from: /list/,
+                    to: '/list/html'
+                }
+            ]
+        }
     },
     plugins: [
         htmlPluginHome,
-        htmlPluginBlog
+        htmlPluginBlog,
+        htmlPluginList
     ],
+    devtool:  'cheap-module-eval-source-map',
     module: {
         rules: [
             {

@@ -12,4 +12,4 @@ class List extends React.Component {
     }
 }
 
-export default List
+ReactDOM.render(<List />, document.getElementById('root'))

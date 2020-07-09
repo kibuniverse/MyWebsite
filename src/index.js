@@ -4,6 +4,6 @@ import App from './components/HomePage/Main.js'
 import AppRouter from './AppRouter.js'
 
 ReactDOM.render(
-    <AppRouter />,
+    <App />,
     document.getElementById('root')
 )
