@@ -15,11 +15,16 @@ const htmlPluginBlog = new HtmlWebpackPlugin({
 module.exports = {
     entry: {
         index: './src/index.js',
-        blog: './src/components/blogPage/index.js'
+        blog: './src/components/blogPage/index.js',
+        list: './src/components/list/Index.js'
     },
     output: {
         filename: '[name].js',
-        path: __dirname + '/dist'
+        path: path.resolve(__dirname, 'dist')
+    },
+    devServer: {
+        prot: '8081',
+        historyApiFallback: true
     },
     plugins: [
         htmlPluginHome,
