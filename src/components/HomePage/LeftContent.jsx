@@ -2,23 +2,15 @@ import React, { useState, useEffect } from 'react'
 import {List} from 'antd'
 import {CalendarOutlined, SnippetsOutlined} from '@ant-design/icons'
 import '../../styles/mainer.css' 
-import axios from 'axios'
-import servicePath from '../../config/apiurl'
 
-const LeftContent = (list) => {
-    const [myList, setMyList] = useState([])
-    useEffect(() => {
-        window.location
-        axios(servicePath.getArticleList).then(res => {
-            setMyList(res.data.data)
-        })
-    }, [])
+
+const LeftContent = props => {
     return (
         <>
             <List
                 header={<div>最新日志</div>}
                 itemLayout='vertical'
-                dataSource={myList}
+                dataSource={props.myList}
                 renderItem={item => (
                     <List.Item onClick={() => {window.location.href = `http://localhost:8081/blog.html?id=${item.id}`}}>
                         <div className='list-title'>{item.title}</div>

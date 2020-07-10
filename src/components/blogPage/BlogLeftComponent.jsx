@@ -3,17 +3,38 @@ import { Breadcrumb } from 'antd'
 import { HomeOutlined, UserOutlined, CalendarOutlined, FlagOutlined} from '@ant-design/icons';
 import '../../styles/blogDetail.css'
 import ReactMarkdown from 'react-markdown'
+import marked from 'marked'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/monokai-sublime.css'
 import axios from 'axios'
 import servicePath from '../../config/apiurl'
 import { getPageSendParas } from '../../static/js/jsTool.js'
 const LeftComponent = props => {
+    const renderer = new marked.Renderer()
+    marked.setOptions = ({
+        renderer: renderer,
+        gfm: true,
+        pedantic: false,
+        sanitize: false,
+        tables: true,
+        breaks: false,
+        smartLists: true,
+        smartypants: false,
+        sanitize:false,
+        xhtml: false,
+        highlight: function (code) {
+            return hljs.highlightAuto(code).value
+        }
+    })
     const [articleDetail, setArticle] = useState([])
+    const [html, setHtml] = useState('加载中..., 请稍等')
     console.log(getPageSendParas)
     let id = getPageSendParas().get('id');
     useEffect(() => {
         axios(servicePath.getArticleById + `/${id}`).then(res => {
             console.log(res.data.data)
             setArticle(res.data.data[0])
+            setHtml(marked(res.data.data[0].articleContent))
         })     
     }, [])
 
@@ -44,11 +65,9 @@ const LeftComponent = props => {
                     <span>{articleDetail.typeName}</span>
                 </span>
             </div>          
-            <div className='detail-content'>
-                <ReactMarkdown 
-                    source={articleDetail.articleContent}
-                    escapeHtml={false}
-                />
+            <div className='detail-content'
+                dangerouslySetInnerHTML={{__html:html}}
+            >
             </div>  
         </div>
     )

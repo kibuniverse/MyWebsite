@@ -52,3 +52,12 @@
     font-size: 1.5rem;
     font-weight: 600;
 }
+
+.page-mark {
+    background-color: rgb(71, 151, 226);
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
