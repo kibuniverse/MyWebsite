@@ -1,15 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-class List extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-    render() {
-        return (
-            <h2>List Page</h2>
-        )
-    }
+import List from './List.jsx'
+import Header from '../HomePage/Header.jsx'
+import 'antd/dist/antd.css'
+import '../../styles/mainer.css'
+import '../../static/styles/base.css'
+function App() {
+    return (
+        <div>
+            <Header />
+            <List />
+        </div>
+    )
 }
-
-ReactDOM.render(<List />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import {Breadcrumb} from 'antd'
+import { Breadcrumb } from 'antd'
 import { HomeOutlined, UserOutlined, CalendarOutlined, FlagOutlined} from '@ant-design/icons';
 import '../../styles/blogDetail.css'
 import ReactMarkdown from 'react-markdown'
 import axios from 'axios'
 import servicePath from '../../config/apiurl'
+import { getPageSendParas } from '../../static/js/jsTool.js'
 const LeftComponent = props => {
     const [articleDetail, setArticle] = useState([])
+    console.log(getPageSendParas)
     let id = getPageSendParas().get('id');
     useEffect(() => {
         axios(servicePath.getArticleById + `/${id}`).then(res => {
@@ -50,15 +52,6 @@ const LeftComponent = props => {
             </div>  
         </div>
     )
-}
-
-function getPageSendParas() {
-    const paramsMap = new Map()
-    window.location.search.slice(1).split('&').forEach(item => {
-        let [key, value] = item.split('=')
-        paramsMap.set(key, value)
-    }) 
-    return paramsMap
 }
 
 export default LeftComponent

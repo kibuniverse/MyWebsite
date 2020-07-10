@@ -6,7 +6,7 @@ import '../../styles/header.css'
 const Header = () => {
     function handleClick(e) {
         console.log(e.key);
-        window.location.href='http://localhost:8081'
+        window.location.href='http://localhost:8081/list.html?typeId=1'
     }
     return (
         <div className='header'>

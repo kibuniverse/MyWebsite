@@ -1,7 +1,7 @@
 import React from 'react'
 import {Row, Col} from 'antd'
 import '../../styles/list.css'
-
+import Author from '../HomePage/Author.jsx'
 function List(props) {
     return (
         <div className='List'>
@@ -10,7 +10,7 @@ function List(props) {
                     left
                 </Col>
                 <Col className='commRight commLR' xs={0} sm={0} md={6} lg={5}>
-                    right
+                    <Author />
                 </Col>
             </Row>
         </div>

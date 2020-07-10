@@ -8,9 +8,10 @@ import servicePath from '../../config/apiurl'
 const LeftContent = (list) => {
     const [myList, setMyList] = useState([])
     useEffect(() => {
+        window.location
         axios(servicePath.getArticleList).then(res => {
             setMyList(res.data.data)
-        })     
+        })
     }, [])
     return (
         <>
