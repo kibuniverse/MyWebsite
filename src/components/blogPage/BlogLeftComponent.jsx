@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Breadcrumb } from 'antd'
 import { HomeOutlined, UserOutlined, CalendarOutlined, FlagOutlined} from '@ant-design/icons';
 import '../../styles/blogDetail.css'
-import ReactMarkdown from 'react-markdown'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
@@ -28,7 +27,6 @@ const LeftComponent = props => {
     })
     const [articleDetail, setArticle] = useState([])
     const [html, setHtml] = useState('加载中..., 请稍等')
-    console.log(getPageSendParas)
     let id = getPageSendParas().get('id');
     useEffect(() => {
         axios(servicePath.getArticleById + `/${id}`).then(res => {
