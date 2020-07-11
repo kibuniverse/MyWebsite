@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(http://qcqc6tkus.bkt.clouddn.com/image/moon.png?e=1594485679&attname=&token=skksYTMX_1HVyt3hNC5HL2edHfmVTb65rW_hmBon:sQVsVWknSltvCPJCqC5L-5y2alo=);
+    background-size: 100%;
+}
+.login-box {
+    width: 30%;
+    margin: 10rem auto;
+    background-color: aliceblue;
+    opacity: .9;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.login-form {
+    max-width: 300px;
+}
+.login-form-forgot {
+    float: right;
+}
+.ant-col-rtl .login-form-forgot {
+    float: left;
+}
+.login-form-button {
+    width: 100%;
+}

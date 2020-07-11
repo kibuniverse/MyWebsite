@@ -1,16 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'antd/dist/antd.css'
-import Login from './components/Login.jsx'
+import Main from './pages/Main.js'
 
-
-const App = () => (
-  <div>
-    <Login />
-  </div>
-)
 ReactDOM.render(
-  <App />,
+  <Main />,
   document.getElementById('root')
 );
 
