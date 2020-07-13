@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Layout, Menu, Breadcrumb } from 'antd'
 import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons'
 import AddArticle from './AddArticle.jsx'
-import servicePath from '../config/apiUrl.js'
+// import servicePath from '../config/apiUrl.js'
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;

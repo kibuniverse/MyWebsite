@@ -10,16 +10,15 @@ const { TextArea } = Input
 
 const AddArticle = props => {
 
-    const [articleId, setArticleId] = useState(0)  // 文章的ID，如果是0说明是新增加，如果不是0，说明是修改
+    // const [articleId, setArticleId] = useState(0)  // 文章的ID，如果是0说明是新增加，如果不是0，说明是修改
     const [articleTitle, setArticleTitle] = useState('')   //文章标题
     const [articleContent, setArticleContent] = useState('')  //markdown的编辑内容
     const [markdownContent, setMarkdownContent] = useState('预览内容') //html内容
-    const [introducemd, setIntroducemd] = useState()            //简介的markdown内容
-    const [introducehtml, setIntroducehtml] = useState('等待编辑') //简介的html内容
+    const [introduce, setIntroduce] = useState()            //简介的markdown内容
     const [typeInfo, setTypeInfo] = useState([]) // 文章类别信息
     const [selectedType, setSelectType] = useState(1) //选择的文章类别
     const [isLoading, setIsLoading] = useState(false)
-    const checkPass = false
+
     marked.setOptions({
         renderer: marked.Renderer(),
         gfm: true,
@@ -37,8 +36,7 @@ const AddArticle = props => {
             header: { 'Access-Control-Allow-Origin': '*' },
             withCredentials: true
         }).then(res => {
-            console.log(res.data.data)
-            if (res.data.data == "未登录") {
+            if (res.data.data === "未登录") {
                 localStorage.removeItem('openId')
                 props.history.push('/')
             } else {
@@ -54,13 +52,12 @@ const AddArticle = props => {
     const blogContentChange = e => {
         setArticleContent(e.target.value)
         let html = marked(e.target.value)
+        console.log(html)
         setMarkdownContent(html)
     }
 
     const introduceContentChange = e => {
-        setIntroducemd(e.target.value)
-        let html = marked(e.target.value)
-        setIntroducehtml(html)
+        setIntroduce(e.target.value)
     }
 
     const selectTypeHandler = value => {
@@ -78,7 +75,7 @@ const AddArticle = props => {
         } else if (!articleContent) {
             message.error('文章内容不能为空')
             return false
-        } else if (!introducemd) {
+        } else if (!introduce) {
             message.error('简介不能为空')
             return false
         }
@@ -92,9 +89,28 @@ const AddArticle = props => {
     }
 
     const issueArticle = () => {
+        
         if(checkLayout()) {
             console.log('发布文章')
+            setIsLoading(true)
+            let articleInfo = {
+                typeId: selectedType,
+                title: articleTitle,
+                addTime: new Date().getTime(),
+                introduce: introduce,
+                articleContent: articleContent
+            }
+            axios({
+                method: 'post',
+                url: servicePath.addArticle,
+                data: articleInfo,
+                withCredentials: true
+            }).then(res => {
+                console.log(res)
+                setIsLoading(false)
+            })
         }
+        
     }
     return (
         <Spin spinning={isLoading} indicator={LoadingOutlined}>
@@ -143,22 +159,16 @@ const AddArticle = props => {
                     <Row >
                         <Col span={24}>
                             <TextArea
-                                value={introducemd}
+                                value={introduce}
                                 rows={5}
                                 placeholder='文章简介'
                                 onChange={introduceContentChange}
                                 onPressEnter={introduceContentChange}
                             />
                         </Col>
-                        <div
-                            className="introduce-view"
-                            dangerouslySetInnerHTML={{ __html: introducehtml }}
-                        >
-                        </div>
-
                         <Col span={24} className='store-push-article'>
                             <Button size='large' onClick={saveArticle}>暂存文章</Button>
-                            <Button size='large' type='primary' onCilck={issueArticle}>发布文章</Button>
+                            <Button size='large' type='primary' onClick={issueArticle}>发布文章</Button>
                         </Col>
 
                     </Row>
