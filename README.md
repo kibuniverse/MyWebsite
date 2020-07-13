@@ -1,8 +1,155 @@
 # MyWebsite
 
-个人网站项目搭建
+>  个人网站项目搭建
 
 ## 一、项目背景
+
+
+
+
+
+## 二、项目目录
+
+```
+
+├─admin
+│  │  .gitignore
+│  │  package.json
+│  │  README.md
+│  │
+│  ├─public
+│  │      favicon.ico
+│  │      index.html
+│  │      logo192.png
+│  │      logo512.png
+│  │      manifest.json
+│  │      robots.txt
+│  │
+│  └─src
+│      │  index.js
+│      │
+│      ├─config
+│      │      apiUrl.js
+│      │
+│      ├─pages
+│      │      AddArticle.jsx
+│      │      AdminIndex.jsx
+│      │      ArticleList.jsx
+│      │      Login.jsx
+│      │      Main.js
+│      │
+│      └─styles
+│              AddArticle.css
+│              ArticleList.css
+│              login.css
+│
+├─service
+│  │  .autod.conf.js
+│  │  .eslintignore
+│  │  .eslintrc
+│  │  .gitignore
+│  │  .travis.yml
+│  │  appveyor.yml
+│  │  jsconfig.json
+│  │  package.json
+│  │  README.md
+│  │
+│  ├─.github
+│  │  └─workflows
+│  │          nodejs.yml
+│  │
+│  ├─app
+│  │  │  router.js
+│  │  │
+│  │  ├─controller
+│  │  │  ├─admin
+│  │  │  │      main.js
+│  │  │  │
+│  │  │  └─default
+│  │  │          home.js
+│  │  │
+│  │  ├─middleware
+│  │  │      adminAuth.js
+│  │  │
+│  │  ├─public
+│  │  │      getSql.js
+│  │  │
+│  │  └─router
+│  │          admin.js
+│  │          default.js
+│  │
+│  ├─config
+│  │      config.default.js
+│  │      plugin.js
+│  │
+│  └─test
+│      └─app
+│          └─controller
+│                  home.test.js
+│
+└─src
+    │  index.html
+    │  index.js
+    │
+    ├─components
+    │  ├─blogPage
+    │  │      BlogLeftComponent.jsx
+    │  │      index.js
+    │  │      Mainer.jsx
+    │  │
+    │  ├─HomePage
+    │  │      Advert.jsx
+    │  │      Author.jsx
+    │  │      Footer.jsx
+    │  │      Header.jsx
+    │  │      LeftContent.jsx
+    │  │      Main.js
+    │  │      Mainer.jsx
+    │  │      RightContent.jsx
+    │  │
+    │  └─list
+    │          Index.js
+    │          List.jsx
+    │          MarkLocation.jsx
+    │
+    ├─config
+    │      apiurl.js
+    │
+    ├─images
+    │      th.jpg
+    │
+    ├─md
+    │      promise.md
+    │
+    ├─pages
+    │      blog.html
+    │      list.html
+    │
+    ├─static
+    │  │  favicon.ico
+    │  │  header.png
+    │  │
+    │  ├─js
+    │  │      jsTool.js
+    │  │
+    │  └─styles
+    │          base.css
+    │
+    ├─store
+    │      actionCreateor.js
+    │
+    └─styles
+            Advert.css
+            blogDetail.css
+            blogMainer.css
+            footer.css
+            header.css
+            list.css
+            mainer.css
+    
+```
+
+
 
 
 
