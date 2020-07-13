@@ -10,7 +10,7 @@ const { TextArea } = Input
 
 const AddArticle = props => {
 
-    // const [articleId, setArticleId] = useState(0)  // 文章的ID，如果是0说明是新增加，如果不是0，说明是修改
+    const [articleId, setArticleId] = useState(0)  // 文章的ID，如果是0说明是新增加，如果不是0，说明是修改
     const [articleTitle, setArticleTitle] = useState('')   //文章标题
     const [articleContent, setArticleContent] = useState('')  //markdown的编辑内容
     const [markdownContent, setMarkdownContent] = useState('预览内容') //html内容
@@ -82,6 +82,7 @@ const AddArticle = props => {
         message.success('检验通过')
         return true
     }
+
     const saveArticle = () => {
         setIsLoading(true)
         checkLayout()
@@ -100,13 +101,22 @@ const AddArticle = props => {
                 introduce: introduce,
                 articleContent: articleContent
             }
+            let url = servicePath.addArticle
+            //  如果 articleId 不为零, 则使用更新文章接口, 并在参数中增加文章id
+            if(articleId != 0) {
+                url = servicePath.updateArticle
+                articleInfo.id = articleId
+            }
+
             axios({
                 method: 'post',
-                url: servicePath.addArticle,
+                url: url,
                 data: articleInfo,
+                header:{ 'Access-Control-Allow-Origin':'*' },
                 withCredentials: true
             }).then(res => {
                 console.log(res)
+                setArticleId(res.data.insertId)
                 setIsLoading(false)
             })
         }
@@ -167,7 +177,7 @@ const AddArticle = props => {
                             />
                         </Col>
                         <Col span={24} className='store-push-article'>
-                            <Button size='large' onClick={saveArticle}>暂存文章</Button>
+                            <Button size='large' onClick={saveArticle}>保存</Button>
                             <Button size='large' type='primary' onClick={issueArticle}>发布文章</Button>
                         </Col>
 

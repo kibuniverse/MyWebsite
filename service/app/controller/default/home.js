@@ -4,10 +4,6 @@ const Controller = require('egg').Controller
 
 class HomeController extends Controller{
 
-    async index(){
-        this.ctx.body = 'api 接口';
-    }
-
     async getArticleList() {
         let sql = 'SELECT articles.id,type.typeName,articles.title,articles.introduce,articles.addTime FROM articles, type WHERE type.id = articles.typeId'
         const res = await this.app.mysql.query(sql)
