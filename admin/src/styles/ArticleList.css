@@ -2,3 +2,8 @@
     text-align: center;
     width: 100%;
 }
+
+.change-delete-box {
+    display: flex;
+    justify-content: space-evenly;
+}

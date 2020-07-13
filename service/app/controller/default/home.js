@@ -22,9 +22,11 @@ class HomeController extends Controller{
     }
 
     async getArticleListByTypeId() {
-        let typeId = thsi.ctx.params.typeId
+        let typeId = this.ctx.params.typeId
         let sql = `SELECT * FROM articles WHERE typeId=${typeId}`
+        console.log(sql)
         const res = await this.app.mysql.query(sql)
+        console.log(res)
         this.ctx.body = {
             data: res
         }

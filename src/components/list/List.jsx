@@ -10,8 +10,10 @@ function List(props) {
     const [myList, setMyList] = useState([])
     useEffect(() => {
         let typeId = getPageSendParas().get('typeId')
+        console.log(typeId)
         axios(`${servicePath.getArticleListByTypeId}/${typeId}`).then(res => {
             setMyList(res.data.data)
+            console.log(res.data)
         })
     }, [])
     return (

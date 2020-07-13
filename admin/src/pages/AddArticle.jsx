@@ -29,6 +29,22 @@ const AddArticle = props => {
         smartLists: true,
         smartypants: false,
     })
+    const getArticleById = id => {
+        axios({
+            method: 'get',
+            url: servicePath.getArticleById + '/' + id,
+            header: { 'Access-Control-Allow-Origin':'*' },
+            withCredentials: true
+        }).then(res => {
+            console.log(res.data.data[0])
+            let article = res.data.data[0]
+            setArticleTitle(article.title)
+            setIntroduce(article.introduce)
+            setArticleContent(article.articleContent)
+            let html = marked(article.articleContent)
+            setMarkdownContent(html)
+        })
+    }
     const getTypeInfo = () => {
         axios({
             method: 'get',
@@ -44,9 +60,14 @@ const AddArticle = props => {
             }
         })
     }
-
+    
     useEffect(() => {
         getTypeInfo()
+        console.log(props.id)
+        if(props.id) {
+            setArticleId(props.id)
+            getArticleById(props.id)
+        }
     }, [])
 
     const blogContentChange = e => {

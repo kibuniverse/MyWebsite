@@ -13,6 +13,7 @@ const AdminIndex = props => {
 
     const [collapsed, setCollapesd] = useState(false)
     const [showComponent, setShowComponent] = useState('addArticle')
+    const [modificedArticleId, setModificedArticleId] = useState(0)
     const onCollapse = collapsed => {
         setCollapesd(collapsed)
     }
@@ -23,7 +24,12 @@ const AdminIndex = props => {
             case 'addArticle': 
                 return <AddArticle />
             case 'articleList':
-                return <ArticleList />
+                return <ArticleList 
+                        setShowComponent={setShowComponent}
+                        setModificedArticleId={setModificedArticleId}
+                        />
+            case 'modificArticle':
+                return <AddArticle id={modificedArticleId} />
             default: 
                 return <AddArticle />
         }
@@ -36,19 +42,11 @@ const AdminIndex = props => {
                     <Menu.Item key="1" icon={<PieChartOutlined />}>
                         工作台
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<DesktopOutlined />}  onClick={() => {setShowComponent('articleList')}}>
-                        添加文章
-                    </Menu.Item>
                     <SubMenu key="sub1" icon={<UserOutlined />} title="文章管理">
-                        <Menu.Item key="3">添加文章</Menu.Item>
-                        <Menu.Item key="4">文章列表</Menu.Item>
+                        <Menu.Item key="3" onClick={() => {setShowComponent('addArticle')}}>添加文章</Menu.Item>
+                        <Menu.Item key="4"  onClick={() => {setShowComponent('articleList')}}>文章列表</Menu.Item>
                         {/* <Menu.Item key="5"></Menu.Item> */}
                     </SubMenu>
-                    <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-                        <Menu.Item key="6">Team 1</Menu.Item>
-                        <Menu.Item key="8">Team 2</Menu.Item>
-                    </SubMenu>
-                    <Menu.Item key="9" icon={<FileOutlined />} />
                 </Menu>
             </Sider>
             <Layout className="site-layout">
