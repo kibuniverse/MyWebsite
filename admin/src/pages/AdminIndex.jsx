@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import { Layout, Menu, Breadcrumb } from 'antd'
 import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons'
 import AddArticle from './AddArticle.jsx'
-// import servicePath from '../config/apiUrl.js'
+import ArticleList from './ArticleList.jsx'
+import servicePath from '../config/apiUrl.js'
+
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -10,10 +12,22 @@ const { SubMenu } = Menu;
 const AdminIndex = props => {
 
     const [collapsed, setCollapesd] = useState(false)
+    const [showComponent, setShowComponent] = useState('addArticle')
     const onCollapse = collapsed => {
         setCollapesd(collapsed)
     }
-    
+
+    // 条件渲染组件
+    const ComponentRouter = () => {
+        switch(showComponent) {
+            case 'addArticle': 
+                return <AddArticle />
+            case 'articleList':
+                return <ArticleList />
+            default: 
+                return <AddArticle />
+        }
+    }
     return (
         <Layout style={{ minHeight: '100vh' }}>
             <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
@@ -22,7 +36,7 @@ const AdminIndex = props => {
                     <Menu.Item key="1" icon={<PieChartOutlined />}>
                         工作台
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<DesktopOutlined />}>
+                    <Menu.Item key="2" icon={<DesktopOutlined />}  onClick={() => {setShowComponent('articleList')}}>
                         添加文章
                     </Menu.Item>
                     <SubMenu key="sub1" icon={<UserOutlined />} title="文章管理">
@@ -45,7 +59,7 @@ const AdminIndex = props => {
                         <Breadcrumb.Item>工作台</Breadcrumb.Item>
                     </Breadcrumb>
                     <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-                        <AddArticle />
+                        <ComponentRouter />
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>blog system admin page</Footer>

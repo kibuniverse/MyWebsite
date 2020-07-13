@@ -8,13 +8,13 @@
 
 ## 项目中遇到的问题
 
-#### 在react中异步请求数据时出现问题
+#### 1. 在react中异步请求数据时出现问题
 
-[解决] 在使用useEffect传入第二个空数组参数并在请求Promise的异步回调中修改数据
+【解决】 在使用useEffect传入第二个空数组参数并在请求Promise的异步回调中修改数据
 
 
 
-#### 在项目内使用`create-react-app`生成管理员前端后，使用`npm run start`出现 `webpack`版本错误
+#### 2. 在项目内使用`create-react-app`生成管理员前端后，使用`npm run start`出现 `webpack`版本错误
 
 【解决】 首先cd 到外层文件夹，删除对应的`webpack`, `webpack-cli`, `webpack-dev-server`包
 
@@ -36,6 +36,10 @@ npm install webpack-dev-serve@对应的版本号 -D
 ```
 
 重新运行`npm start `正常启动服务
+
+#### 3. 遇到组件重复渲染报错
+
+
 
 
 
