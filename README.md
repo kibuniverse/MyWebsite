@@ -10,7 +10,7 @@
 
 前端：`React` `React Hook`  `Ant-Design` `webpack`
 
-后端：`Egg.js`(基于`Koa`的上层框架)  `Nginx`
+后端：`Egg.js`(基于`Koa`的上层框架)  `Nginx` `pm2`
 
 
 
@@ -125,11 +125,11 @@
 
 ```mysql
 npm uninstall webpack -g
-npm unstall webpack
+npm uninstall webpack
 npm uninstall webpack-cli -g
-npm unstall webpack-cli
-npm uninstall webpack-dev-serve -g
-npm unstall webpack-dev-serve
+npm uninstall webpack-cli
+npm uninstall webpack-dev-server -g
+npm uninstall webpack-dev-server
 ```
 
 然后重新安装适应`create-react-app`的`webpack`以及`webpack`相关包的版本
@@ -137,7 +137,7 @@ npm unstall webpack-dev-serve
 ```text
 npm install webpack@对应的版本号 -D
 npm install webpack-cli -D
-npm install webpack-dev-serve@对应的版本号 -D
+npm install webpack-dev-server@对应的版本号 -D
 ```
 
 重新运行`npm start `正常启动服务
@@ -147,3 +147,19 @@ npm install webpack-dev-serve@对应的版本号 -D
 
 
 ## 六、上线过程中遇到的问题
+
+服务器环境 `CentOS7.6 `
+
+#### 1. 出现`Fatal error: ENOSPC: System limit for number of file watchers reached, watch '...path...'`错误
+
+【解决】出现这个错误的原因是因为
+
+
+
+#### 2.数据库版本错误
+
+由于项目在写的过程中
+
+
+
+#### 3. 在服务器上开启服务后在浏览器中无法访问(`nginx`已经配置)
