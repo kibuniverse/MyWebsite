@@ -1,159 +1,117 @@
-# MyWebsite
+# My Website
 
->  个人网站项目搭建
+> 个人网站项目搭建
 
 ## 一、项目背景
 
+该项目为第一个`React`项目，目的在于锻炼对`React`的项目使用能力，其中大部分组件使用了`React Hook`语法, 顺便也通过此次项目搭建个人网站，由于该项目目的主要为锻炼`React`的开发使用，所以后端以及`UI`均使用了现成的框架。博客用户端脚手架为个人手动搭建，了解了`React`的工作环境。
 
+项目用到的技术栈主要有
+
+前端：`React` `React Hook`  `Ant-Design` `webpack`
+
+后端：`Egg.js`(基于`Koa`的上层框架)  `Nginx`
 
 
 
 ## 二、项目目录
 
-```
-
-├─admin
-│  │  .gitignore
-│  │  package.json
+```js
+│  README.md      // 项目readme 文档
+│  webpack.config.js   // webpack打包配置文件
+│
+├─admin   // 管理员端
+│  │  .gitignore   
+│  │  package.json   // 包管理文件
 │  │  README.md
 │  │
-│  ├─public
-│  │      favicon.ico
-│  │      index.html
-│  │      logo192.png
-│  │      logo512.png
-│  │      manifest.json
-│  │      robots.txt
+│  ├─public    // 图标资源文件夹
 │  │
 │  └─src
-│      │  index.js
+│      │  index.js  // 入口文件
 │      │
-│      ├─config
+│      ├─config   // 公共请求路径配置文件夹  方便后期上线
 │      │      apiUrl.js
 │      │
-│      ├─pages
-│      │      AddArticle.jsx
-│      │      AdminIndex.jsx
-│      │      ArticleList.jsx
-│      │      Login.jsx
-│      │      Main.js
+│      ├─pages  // 页面组件文件夹
 │      │
-│      └─styles
-│              AddArticle.css
-│              ArticleList.css
-│              login.css
+│      └─styles  // 样式
 │
-├─service
-│  │  .autod.conf.js
-│  │  .eslintignore
-│  │  .eslintrc
-│  │  .gitignore
-│  │  .travis.yml
-│  │  appveyor.yml
-│  │  jsconfig.json
-│  │  package.json
-│  │  README.md
-│  │
-│  ├─.github
-│  │  └─workflows
-│  │          nodejs.yml
+├─service   // 提供服务端
 │  │
 │  ├─app
-│  │  │  router.js
+│  │  │  router.js  // 总路由文件
 │  │  │
-│  │  ├─controller
-│  │  │  ├─admin
-│  │  │  │      main.js
+│  │  ├─controller  // 提供服务接口文件夹
+│  │  │  ├─admin   // 提供管理员端接口
 │  │  │  │
-│  │  │  └─default
-│  │  │          home.js
+│  │  │  └─default   // 提供用户端接口
 │  │  │
-│  │  ├─middleware
-│  │  │      adminAuth.js
+│  │  ├─middleware  // 中间键， 做session验证
 │  │  │
-│  │  ├─public
-│  │  │      getSql.js
-│  │  │
-│  │  └─router
+│  │  └─router  // 子路由文件夹
 │  │          admin.js
 │  │          default.js
 │  │
-│  ├─config
+│  ├─config  // egg.js 配置文件
 │  │      config.default.js
 │  │      plugin.js
-│  │
-│  └─test
-│      └─app
-│          └─controller
-│                  home.test.js
 │
-└─src
-    │  index.html
-    │  index.js
+└─src   // 博客主页面文件夹
+    │  index.js  // 主入口文件
     │
-    ├─components
+    ├─components  // 各个页面组件文件
+    |  |
     │  ├─blogPage
-    │  │      BlogLeftComponent.jsx
-    │  │      index.js
-    │  │      Mainer.jsx
     │  │
     │  ├─HomePage
-    │  │      Advert.jsx
-    │  │      Author.jsx
-    │  │      Footer.jsx
-    │  │      Header.jsx
-    │  │      LeftContent.jsx
-    │  │      Main.js
-    │  │      Mainer.jsx
-    │  │      RightContent.jsx
     │  │
     │  └─list
-    │          Index.js
-    │          List.jsx
-    │          MarkLocation.jsx
     │
-    ├─config
+    ├─config   // 公共请求路径配置文件夹  方便后期上线
     │      apiurl.js
-    │
-    ├─images
-    │      th.jpg
-    │
-    ├─md
-    │      promise.md
-    │
     ├─pages
-    │      blog.html
-    │      list.html
     │
-    ├─static
+    ├─static   // 静态资源
     │  │  favicon.ico
     │  │  header.png
     │  │
-    │  ├─js
-    │  │      jsTool.js
+    │  ├─js   // js工具
     │  │
-    │  └─styles
+    │  └─styles  // 公共样式
     │          base.css
     │
-    ├─store
-    │      actionCreateor.js
     │
-    └─styles
-            Advert.css
-            blogDetail.css
-            blogMainer.css
-            footer.css
-            header.css
-            list.css
-            mainer.css
-    
+    └─styles    // css样式
 ```
 
 
 
+## 三、项目功能
+
+项目分为两个用户端和管理员端
+
+用户端主要实现了博客的展示以及个人简介
+
+管理端实现了博客的增删改查, (使用markdown 格式)
 
 
-## 项目中遇到的问题
+
+## 四、项目规范
+
+### 4.1 命名规范
+
+`js`变量均为驼峰式 
+
+`css`样式为`单词-单词`
+
+### 4.2 推送规范
+
+`master`为主分支， 一般不往这个分支进行直接推送， `dev`分支为主要的开发分支, 其余分支根据分支名作为开发其他功能分支， 由于该项目为个人项目，所以不存在`code review`, 当`dev`分支完成并完善一个功能后直接在本地合并至主分支并推送至`github`
+
+
+
+## 五、项目开发中遇到的问题
 
 #### 1. 在react中异步请求数据时出现问题
 
@@ -188,9 +146,4 @@ npm install webpack-dev-serve@对应的版本号 -D
 
 
 
-
-
-## 项目的缺点
-
-- 由于本项目脚手架为个人手动搭建，并且使用`webpack` 直接打包`html`页面并将打包后的`js`引入，所以未使用`react`路由
-
+## 六、上线过程中遇到的问题
