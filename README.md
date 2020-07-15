@@ -101,7 +101,7 @@
 
 ### 4.1 命名规范
 
-`js`变量均为驼峰式 
+`js`变量均为驼峰式 , 各个组件默认大写字母开头
 
 `css`样式为`单词-单词`
 
@@ -144,27 +144,74 @@ npm install webpack-dev-server@对应的版本号 -D
 
 #### 3. 遇到组件重复渲染报错
 
+原因是在一个组件的`onClick`方法中直接调用了对应的数据修改函数，导致在编译时就执行了改函数，进入了一个递归的过程。
 
 
-## 六、上线过程中遇到的问题
+
+## 六、项目上线过程
 
 服务器环境 `CentOS7.6 `
 
-#### 1. 出现`Fatal error: ENOSPC: System limit for number of file watchers reached, watch '...path...'`错误
+### 大体的流程
+
+首先将代码从`github `上拉下来
+
+#### 后台服务端
+
+- 执行`npm install --save`安装`pack.json`文件夹中需要的包
+- 修改`config`文件夹中 数据库的名称和密码
+- 配置`nginx`
+- 启动服务
+
+#### 前端用户端
+
+
+
+#### 前端管理员端
+
+
+
+
+
+#### 上线过程中遇到的问题
+
+##### 1. 出现`Fatal error: ENOSPC: System limit for number of file watchers reached, watch '...path...'`错误
 
 【解决】出现这个错误的原因是因为
 
 
 
-#### 2.数据库版本错误
+##### 2.数据库版本错误
 
 由于项目在写的过程中是在本地进行调试的，但是本地的数据库版本为8.x，因为本地数据库排序规则(`utf8mb4_0900_ai_ci`)和服务器数据库5.x排序规则(`utf8_general_ci`)不相符，导致本地数据库导出的`sql`脚本文件无法成功在服务器数据库运行，此处为开发前期为准备好，由于表和数据不是很多，就直接在服务器手动建表了 
 
 
 
-#### 3. 在服务器上开启服务后在浏览器中无法访问(`nginx`已经配置)
+##### 3. 管理员端在服务器上开启服务后在浏览器中无法访问(`nginx`已经配置)
 
-管理员端解决方法
+问题： 通过`https://ip:address port`方法可以正常请求页面并进行操作，但是使用`Nginx`进行反向代理后出现`webSocket`连接错误，定位到`Nginx`错误后后配置`http version 1.1 `, ` proxy_set_header Upgrade $http_upgrade;`, `proxy_set_header Connection "Upgrade"`仍然出现`Error during WebSocket handshake` , 由于该端口是管理端，且目前找不到解决方案，就先使用`Ip`进行访问
 
-#### `Nginx`配置`socket`出现问题【未解决】
 
+
+##### 4. 项目上线后发现打开博客主页面就非常慢
+
+打开控制台后发现是下载`index.js`时间过长导致页面无法进行渲染，但由于`UI`都放在`index.js`无法提前进行视图层的渲染，由于将所有的组件都包含在`webpack`打包后的`index.js`中，包括`antd`, 各种css, `index.js`未压缩前达到了惊人的`21.7Mb`, 打开主页面需要将近三分钟， 刚开始以为服务器出问题，后面发现只是`index.js`过大
+
+解决办法： 首先使用`Nginx`进行压缩
+
+`Nginx`配置
+
+```ng
+gzip on;
+gzip_min_length 1k;
+gzip_buffers 32 4k;
+gzip_comp_level 9;
+gzip_types text/plain application/javascript application/x-javascript text/css application/xml text/javascript; 
+gzip_vary on;
+gzip_static on;
+gzip_proxied any;
+```
+
+由于`index.js`中引入了太多的组件，所以使用`Nginx`压缩后仍旧有`5.2Mb`，下载依然需要半分钟左右，所以就需要进一步对`index.js`进行处理
+
+下面从`webpack`入手，在使用`webpack-dev-server`的进行热部署的时候加入参数`--compress`对`js`和`css`进行压缩，压缩完之后`index.js`已经达到了`1.1Mb`，相比于之前的`21Mb`有了明显的提升，但是仍旧需要十几秒的加载时间，还需继续优化。。
