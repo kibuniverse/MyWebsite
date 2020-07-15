@@ -1,0 +1,314 @@
+{
+  "keys": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+  "middleware": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+  "mysql": {
+    "client": {
+      "host": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+      "port": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+      "user": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+      "password": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+      "database": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js"
+    },
+    "app": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+    "agent": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+    "default": {
+      "database": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-mysql@3.0.0@egg-mysql\\config\\config.default.js",
+      "connectionLimit": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-mysql@3.0.0@egg-mysql\\config\\config.default.js"
+    }
+  },
+  "security": {
+    "csrf": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+      "type": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "ignoreJSON": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "useSession": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "cookieName": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "sessionName": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "headerName": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "bodyName": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "queryName": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "refererWhiteList": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "domainWhiteList": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+    "protocolWhiteList": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+    "defaultMiddleware": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+    "xframe": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "value": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.local.js",
+      "maxAge": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "includeSubdomains": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "value": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "value": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "policy": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "checkAddress": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    }
+  },
+  "cors": {
+    "credentials": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js",
+    "allowMethods": "D:\\web\\Reactdemo\\React_demo\\service\\config\\config.default.js"
+  },
+  "session": {
+    "maxAge": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-session@3.2.0@egg-session\\config\\config.default.js",
+    "key": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-session@3.2.0@egg-session\\config\\config.default.js",
+    "httpOnly": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-session@3.2.0@egg-session\\config\\config.default.js",
+    "encrypt": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-session@3.2.0@egg-session\\config\\config.default.js"
+  },
+  "helper": {
+    "shtml": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "callback": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "csrf": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "templatePath": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "dirs": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "queryField": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieField": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieDomain": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-watcher@3.1.1@egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-watcher@3.1.1@egg-watcher\\config\\config.default.js",
+      "development": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-watcher@3.1.1@egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js",
+      "file": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "autoFields": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "defaultCharset": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fieldSize": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fields": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fileSize": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "files": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fileExtensions": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "whitelist": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "tmpdir": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-development@2.5.0@egg-development\\config\\config.default.js",
+    "ignoreDirs": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-development@2.5.0@egg-development\\config\\config.default.js",
+    "fastReady": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-development@2.5.0@egg-development\\config\\config.default.js",
+    "reloadOnDebug": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-development@2.5.0@egg-development\\config\\config.default.js",
+    "overrideDefault": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-development@2.5.0@egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxFiles": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxDays": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "dir": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "dynamic": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "preload": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "buffer": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "maxFiles": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js"
+  },
+  "view": {
+    "root": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "cache": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.local.js",
+    "defaultExtension": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "defaultViewEngine": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "mapping": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js"
+  },
+  "env": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "name": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "cookies": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "proxy": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "maxIpsCount": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "maxProxyCount": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "protocolHeaders": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "ipHeaders": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "hostHeaders": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "pkg": {
+    "name": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "version": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "description": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "private": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "egg": {
+      "declarations": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "dependencies": {
+      "axios": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-mysql": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-scripts": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "autod": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "autod-egg": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-bin": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-ci": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-mock": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "eslint": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "eslint-config-egg": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "engines": {
+      "node": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "scripts": {
+      "start": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "stop": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "dev": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "debug": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "test": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "test-local": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "cov": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "lint": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "ci": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "autod": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "ci": {
+      "version": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "repository": {
+      "type": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "url": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "author": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "license": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "baseDir": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "HOME": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "rundir": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "notFound": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "sitefile": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "middlewares": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "httpClient": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "encoding": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "formLimit": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "jsonLimit": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "textLimit": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "strict": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "depth": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "parameterLimit": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "onerror": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "encoding": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "env": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "level": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "consoleLevel": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "outputJSON": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "buffer": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "appLogName": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "coreLogName": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "agentLogName": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "errorLogName": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "request": {
+      "timeout": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "maxSockets": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "maxSockets": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "logging": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "workerStartTimeout": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "serverTimeout": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "port": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "hostname": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "responseTimeout": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "onClientError": "D:\\web\\Reactdemo\\React_demo\\service\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+}
