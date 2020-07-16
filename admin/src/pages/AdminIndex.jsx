@@ -4,7 +4,7 @@ import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutl
 import AddArticle from './AddArticle.jsx'
 import ArticleList from './ArticleList.jsx'
 import servicePath from '../config/apiUrl.js'
-
+import AdminMessageSet from './AdminMessageSet.jsx'
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -30,6 +30,8 @@ const AdminIndex = props => {
                         />
             case 'modificArticle':
                 return <AddArticle id={modificedArticleId} />
+            case 'setAdminMessage':
+                return <AdminMessageSet />
             default: 
                 return <AddArticle />
         }
