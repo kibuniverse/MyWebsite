@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Layout, Menu, Breadcrumb } from 'antd'
-import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons'
+import { DesktopOutlined, PieChartOutlined, FileOutlined, UserOutlined } from '@ant-design/icons'
 import AddArticle from './AddArticle.jsx'
 import ArticleList from './ArticleList.jsx'
 import servicePath from '../config/apiUrl.js'
@@ -44,11 +44,14 @@ const AdminIndex = props => {
                     <Menu.Item key="1" icon={<PieChartOutlined />}>
                         工作台
                     </Menu.Item>
-                    <SubMenu key="sub1" icon={<UserOutlined />} title="文章管理">
+                    <SubMenu key="sub1" icon={<FileOutlined />} title="文章管理">
                         <Menu.Item key="3" onClick={() => {setShowComponent('addArticle')}}>添加文章</Menu.Item>
                         <Menu.Item key="4"  onClick={() => {setShowComponent('articleList')}}>文章列表</Menu.Item>
                         {/* <Menu.Item key="5"></Menu.Item> */}
                     </SubMenu>
+                    <Menu.Item key="2" icon={<UserOutlined />} onClick={() => {setShowComponent('setAdminMessage')}}>
+                        修改信息
+                    </Menu.Item>
                 </Menu>
             </Sider>
             <Layout className="site-layout">

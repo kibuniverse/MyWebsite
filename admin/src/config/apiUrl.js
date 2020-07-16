@@ -1,4 +1,4 @@
-let ipUrl = 'https://www.cloudykz.top/admin/'
+let ipUrl = 'http://localhost:7002/admin/'
 
 let servicePath = {
     checkLogin: ipUrl + 'checkLogin',   //登录检查用户名和密码
@@ -7,7 +7,9 @@ let servicePath = {
     updateArticle: ipUrl + 'updateArticle', //更新文章
     getArticleList: ipUrl + 'getArticleList', // 获取文章列表
     deleteArticle: ipUrl + 'deleteArticle', // 删除文章
-    getArticleById: ipUrl + 'getArticleById'
+    getArticleById: ipUrl + 'getArticleById',
+    updateAdminHeader: ipUrl + 'updateAdminHeader',
+    getUserInfo: ipUrl + 'getMessageInfo'
 }
 
 export default servicePath

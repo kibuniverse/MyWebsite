@@ -74,9 +74,26 @@ class MainController extends Controller {
     async getArticleById() {
         let id = this.ctx.params.id
         let sql = 'SELECT articles.id,type.typeName,articles.title,articles.introduce,articles.addTime,articles.articleContent FROM articles LEFT JOIN type ON articles.typeId = type.id WHERE articles.id=' + id;
-        const res = await this.app.mysql.query(sql);
+        const res = await this.app.mysql.query(sql)
         this.ctx.body = {
             data: res
+        }
+    }
+
+    async getMessageInfo() {
+        let sql = 'SELECT headProtrait, motto FROM admin_user WHERE userName="yankaizhi"'
+        const res = await this.app.mysql.query(sql)
+        console.log(res)
+        this.ctx.body = {
+            data: res
+        }
+    }
+
+    async updateAdminHeader() {
+        let headBase64 = this.ctx.request.body;
+        console.log(headBase64)
+        this.ctx.body = {
+            data : '收到了数据请求了'
         }
     }
 }
