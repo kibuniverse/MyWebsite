@@ -214,4 +214,6 @@ gzip_proxied any;
 
 由于`index.js`中引入了太多的组件，所以使用`Nginx`压缩后仍旧有`5.2Mb`，下载依然需要半分钟左右，所以就需要进一步对`index.js`进行处理
 
-下面从`webpack`入手，在使用`webpack-dev-server`的进行热部署的时候加入参数`--compress`对`js`和`css`进行压缩，压缩完之后`index.js`已经达到了`1.1Mb`，相比于之前的`21Mb`有了明显的提升，但是仍旧需要十秒左右的加载时间，还是很慢。
+下面从`webpack`入手，在使用`webpack-dev-server`的进行热部署的时候加入参数`--compress`对`js`和`css`进行压缩，(项目开始已经安装了提供统一的模块化的`helper` `@babel\runtime`) 压缩完之后`index.js`已经达到了`1.1Mb`，相比于之前的`21Mb`有了明显的提升，但是仍旧需要十秒左右的加载时间，还是很慢。
+
+接下来还是从`webpack`入手，由于项目的`Readt`不需要更新，所以将`React`和`React-dom`脱离`webpack`打包，从而减少打包时间以及打包后的文件大小。
