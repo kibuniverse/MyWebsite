@@ -90,12 +90,14 @@ class MainController extends Controller {
     }
 
     async updateAdminHeader() {
-        let headBase64 = this.ctx.request.body;
-        console.log(headBase64)
+        let headBase64 = this.ctx.request.body
+        console.log(this.ctx.request.body.imagebase64)
+        const uploadToken = require('../../public/getUploadToken')
         this.ctx.body = {
             data : '收到了数据请求了'
         }
     }
+
 }
 
 module.exports = MainController

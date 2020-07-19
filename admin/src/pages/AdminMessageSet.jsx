@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Button, Avatar, Spin, Card } from 'antd'
+import { Button, Avatar, Spin, Card, Upload, message, LoadingOutlined, PlusOutlined } from 'antd'
 import servicePath from '../config/apiUrl.js'
 import { UserOutlined } from '@ant-design/icons'
 import axios from 'axios'
-
+import '../styles/AdminMessageSetting.css'
+import UploadAvatar from '../components/UploadHeaderPortrait.jsx'
 const AdminMessageSet = () => {
     const [userHeadPortrait, setUserHeadProtrait] = useState('')
     const [userMotto, setUserMotto] = useState('加载中, 请稍等')
@@ -31,28 +32,49 @@ const AdminMessageSet = () => {
         }, {
             key: 'tab2',
             tab: '修改签名'
+        }, {
+            key: 'tab3',
+            tab: '修改密码'
         }
     ]
 
     const ChangeUserHeaderProtrait = () => {
         return (
-            <Spin spinning={false}>
-                <Avatar src={userHeadPortrait} icon={<UserOutlined />} size='large'></Avatar>
-            </Spin>
+            <div className='message-setting'>
+                <Avatar src={userHeadPortrait} icons={<UserOutlined />} size={100} className='user-avatar-show' />
+                <div>
+                    <UploadAvatar />
+                </div>
+                
+            </div>
         )
     }
 
     const ChangeUserMotto = () => {
         return (
             <div>
-                修改座右铭组件
+                <div className='user-motto'>
+                    {userMotto}
+                </div>
+                <Input 
+                    type='text'
+                    maxLength={20}
+                >请输入座右铭</Input>
             </div>
         )
     }
 
+    const ChangePassword = () => {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
     const contentList = {
         tab1: <ChangeUserHeaderProtrait />,
-        tab2: <ChangeUserMotto />
+        tab2: <ChangeUserMotto />,
+        tab3: <ChangePassword />
     }
 
     return (

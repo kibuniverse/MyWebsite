@@ -1,4 +1,4 @@
-let ipUrl = 'http://localhost:7002/admin/'
+let ipUrl = 'http://localhost:7001/admin/'
 
 let servicePath = {
     checkLogin: ipUrl + 'checkLogin',   //登录检查用户名和密码

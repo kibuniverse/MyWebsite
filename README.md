@@ -4,7 +4,7 @@
 
 ## 一、项目背景
 
-该项目为第一个`React`项目，目的在于锻炼对`React`的项目使用能力，其中大部分组件使用了`React Hook`语法, 顺便也通过此次项目搭建个人网站，由于该项目目的主要为锻炼`React`的开发使用，所以后端以及`UI`均使用了现成的框架。博客用户端脚手架为个人手动搭建，了解了`React`的工作环境。
+该项目为第一个`React`项目，目的在于锻炼对`React`的项目使用能力，其中大部分组件使用了`React Hook`语法, 顺便也通过此次项目搭建个人网站，由于该项目目的主要为锻炼`React`的开发使用，所以后端以及部分`UI`使用了现成的框架。博客用户端脚手架为个人手动搭建，了解了`React`的工作环境。
 
 项目用到的技术栈主要有
 
@@ -177,7 +177,7 @@ npm install webpack-dev-server@对应的版本号 -D
 
 ##### 1. 出现`Fatal error: ENOSPC: System limit for number of file watchers reached, watch '...path...'`错误
 
-【解决】出现这个错误的原因是因为
+【解决】出现这个错误的原因是因为文件监视程序的系统产生了限制，达到了默认的上限，需要**增加限额**
 
 
 
@@ -214,6 +214,4 @@ gzip_proxied any;
 
 由于`index.js`中引入了太多的组件，所以使用`Nginx`压缩后仍旧有`5.2Mb`，下载依然需要半分钟左右，所以就需要进一步对`index.js`进行处理
 
-下面从`webpack`入手，在使用`webpack-dev-server`的进行热部署的时候加入参数`--compress`对`js`和`css`进行压缩，(项目开始已经安装了提供统一的模块化的`helper` `@babel\runtime`) 压缩完之后`index.js`已经达到了`1.1Mb`，相比于之前的`21Mb`有了明显的提升，但是仍旧需要十秒左右的加载时间，还是很慢。
-
-接下来还是从`webpack`入手，由于项目的`Readt`不需要更新，所以将`React`和`React-dom`脱离`webpack`打包，从而减少打包时间以及打包后的文件大小。
+下面从`webpack`入手，在使用`webpack-dev-server`的进行热部署的时候加入参数`--compress`对`js`和`css`进行压缩，(项目开始已经安装了提供统一的模块化的`helper` `@babel\runtime`) 压缩完之后`index.js`已经达到了`1.1Mb`，相比于之前的`21Mb`有了明显的提升，但是仍旧需要十秒左右的加载时间，还是较慢

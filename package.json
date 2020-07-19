@@ -31,7 +31,6 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
-    "@ant-design/icons-react": "^2.0.1",
     "antd": "^4.3.5",
     "axios": "^0.19.2",
     "highlight.js": "^10.1.1",
