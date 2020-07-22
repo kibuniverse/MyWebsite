@@ -148,7 +148,7 @@ npm install webpack-dev-server@对应的版本号 -D
 
 
 
-## 六、项目上线过程
+## 六、项目上线部署过程
 
 服务器环境 `CentOS7.6 `
 
@@ -168,8 +168,6 @@ npm install webpack-dev-server@对应的版本号 -D
 
 
 #### 前端管理员端
-
-
 
 
 
@@ -214,4 +212,4 @@ gzip_proxied any;
 
 由于`index.js`中引入了太多的组件，所以使用`Nginx`压缩后仍旧有`5.2Mb`，下载依然需要半分钟左右，所以就需要进一步对`index.js`进行处理
 
-下面从`webpack`入手，在使用`webpack-dev-server`的进行热部署的时候加入参数`--compress`对`js`和`css`进行压缩，(项目开始已经安装了提供统一的模块化的`helper` `@babel\runtime`) 压缩完之后`index.js`已经达到了`1.1Mb`，相比于之前的`21Mb`有了明显的提升，但是仍旧需要十秒左右的加载时间，还是较慢
+下面从`webpack`入手，在使用`webpack-dev-server`的进行热部署的时候加入参数`--compress`对`js`和`css`进行压缩，(项目开始已经安装了提供统一的模块化的`helper` `@babel\runtime`) 压缩完之后`index.js`已经达到了`1.1Mb`，相比于之前的`21Mb`有了明显的提升，但是由于我的服务器带宽较小， 仍旧需要十秒左右的加载时间，还是较慢
